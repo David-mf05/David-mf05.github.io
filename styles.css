@@ -1,0 +1,155 @@
+/* Estilos para el botón flotante */
+.btn-floating {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #3399ff; /* Color azul */
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 24px;
+    line-height: 48px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-floating:hover {
+    background-color: #66a3ff; /* Color azul más claro al hacer hover */
+}
+
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #1a1a1a; /* Fondo oscuro */
+    color: #fff;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilos del encabezado */
+header {
+    background-color: #222; /* Fondo del header */
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    z-index: 999;
+    border-bottom: 2px solid #6633cc; /* Línea inferior morada */
+}
+
+header h1 {
+    font-size: 36px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    color: #fff; /* Texto blanco */
+}
+
+header nav ul {
+    list-style-type: none;
+    text-align: center;
+    margin-top: 20px;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #6633cc; /* Color morado */
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+header nav ul li a:hover {
+    background-color: #6633cc;
+    color: #222; /* Texto oscuro */
+    border-color: #6633cc;
+}
+
+/* Estilos de las secciones */
+section {
+    margin-bottom: 40px;
+    text-align: center;
+    padding: 30px;
+    background-color: #222; /* Fondo oscuro */
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 102, 204, 0.4); /* Sombra azul */
+    transition: transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+section:hover {
+    transform: translateY(-10px); /* Efecto de levitación */
+}
+
+section h2 {
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    color: #6633cc; /* Color morado */
+}
+
+section p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #aaa; /* Texto gris claro */
+}
+
+/* Estilos de los botones dentro de las tarjetas */
+section .btn {
+    display: inline-block;
+    background-color: #3399ff; /* Color azul */
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 24px;
+    font-size: 18px;
+    border-radius: 30px; /* Borde redondeado */
+    margin-top: 20px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+section .btn:hover {
+    background-color: #66a3ff; /* Color azul más claro al hacer hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Animaciones */
+@keyframes zoomIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.animated-section {
+    animation: zoomIn 0.5s ease-out;
+}
